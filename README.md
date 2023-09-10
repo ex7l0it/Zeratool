@@ -28,16 +28,18 @@ Zeratool is a python script which accept a binary as an argument and optionally 
 
 ```
 [chris:~/Zeratool] zerapwn.py -h
-usage: zerapwn.py [-h] [-l LIBC] [-u URL] [-p PORT] [-v] [--force_shellcode] [--force_dlresolve] [--skip_check] [--no_win] [--format_only] [--overflow_only] file
+usage: zerapwn.py [-h] [-l LIBC] [-u URL] [-p PORT] [-c COMMAND] [-v] [--force_shellcode] [--force_dlresolve] [--skip_check] [--no_win] [--format_only] [--overflow_only] file
 
 positional arguments:
   file                  File to analyze
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
   -l LIBC, --libc LIBC  libc to use
   -u URL, --url URL     Remote URL to pwn
   -p PORT, --port PORT  Remote port to pwn
+  -c COMMAND, --command COMMAND
+                        Command to run
   -v, --verbose         Verbose mode
   --force_shellcode     Set overflow pwn mode to point to shellcode
   --force_dlresolve     Set overflow pwn mode to use ret2dlresolve

@@ -48,6 +48,7 @@ def main():
     parser.add_argument("-l", "--libc", help="libc to use")
     parser.add_argument("-u", "--url", help="Remote URL to pwn", default="")
     parser.add_argument("-p", "--port", help="Remote port to pwn", default=0, type=int)
+    parser.add_argument("-c", "--command", help="Command to run")
     parser.add_argument(
         "-v", "--verbose", help="Verbose mode", action="store_true", default=False
     )
@@ -115,6 +116,7 @@ def main():
     properties["pwn_type"] = {}
     properties["pwn_type"]["type"] = None
     properties["force_dlresolve"] = args.force_dlresolve
+    properties["command"] = args.command
     log.info("[+] Checking pwn type...")
 
     # Is there an easy win function
